@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S6u-7Q-eeT">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TuDu Today-->
+        <scene sceneID="NTh-Oj-mAg">
+            <objects>
+                <tableViewController id="ItC-aP-D1o" customClass="TuDuTableViewController" customModule="TuDu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kPg-bZ-4PD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TuDuCell" textLabel="90n-7d-ZKu" style="IBUITableViewCellStyleDefault" id="sVb-3n-c2f">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sVb-3n-c2f" id="1As-t5-bgZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="90n-7d-ZKu">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                            <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ItC-aP-D1o" id="iPX-FC-F0K"/>
+                            <outlet property="delegate" destination="ItC-aP-D1o" id="frB-xC-XsW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TuDu Today" id="6Nb-fT-T0u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jyL-Pc-iRt">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Iot-PO-Kke" kind="presentation" identifier="ShowAddTudu" id="sgM-EO-46K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUt-cs-olt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751.20000000000005" y="55.322338830584712"/>
+        </scene>
+        <!--Add Tu Du View Controller-->
+        <scene sceneID="vyg-mn-HvC">
+            <objects>
+                <viewController id="Iot-PO-Kke" customClass="AddTuDuViewController" customModule="TuDu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="voI-6Z-HKb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="p0A-ha-MO4">
+                                <rect key="frame" x="20" y="59" width="335" height="324.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What TuDu Today?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvz-nk-ZwJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="245" text="Say Something..." translatesAutoresizingMaskIntoConstraints="NO" id="fme-gU-6il">
+                                        <rect key="frame" x="0.0" y="74.999999999999986" width="335" height="249.66666666666663"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Iot-PO-Kke" id="bZp-IS-8C4"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xvz-nk-ZwJ" firstAttribute="width" secondItem="fme-gU-6il" secondAttribute="width" id="Dte-u0-WoJ"/>
+                                    <constraint firstItem="Xvz-nk-ZwJ" firstAttribute="height" secondItem="fme-gU-6il" secondAttribute="height" multiplier="0.3" id="FPC-5B-atl"/>
+                                    <constraint firstItem="Xvz-nk-ZwJ" firstAttribute="width" secondItem="p0A-ha-MO4" secondAttribute="width" id="gex-Pc-AoZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="yF8-un-Su3">
+                                <rect key="frame" x="20" y="715" width="335" height="77"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tAc-lS-ecd">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="29"/>
+                                        <segments>
+                                            <segment title="!"/>
+                                            <segment title="!!"/>
+                                            <segment title="!!!"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MLA-dQ-lyo">
+                                        <rect key="frame" x="0.0" y="37" width="335" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6N-a2-mpu">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancel:" destination="Iot-PO-Kke" eventType="touchUpInside" id="tfk-9m-jdU"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lra-67-EJR">
+                                                <rect key="frame" x="0.0" y="0.0" width="670" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="done:" destination="Iot-PO-Kke" eventType="touchUpInside" id="SlU-ju-36W"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Z6N-a2-mpu" firstAttribute="width" secondItem="lra-67-EJR" secondAttribute="width" multiplier="0.5" id="6qK-YP-OH3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yF8-un-Su3" firstAttribute="leading" secondItem="XG6-FX-g4f" secondAttribute="leading" constant="20" id="0pn-mg-boJ"/>
+                            <constraint firstItem="p0A-ha-MO4" firstAttribute="height" secondItem="voI-6Z-HKb" secondAttribute="height" multiplier="0.4" id="2VH-9H-wqA"/>
+                            <constraint firstItem="p0A-ha-MO4" firstAttribute="leading" secondItem="XG6-FX-g4f" secondAttribute="leading" constant="20" id="7dB-gG-ecs"/>
+                            <constraint firstAttribute="bottom" secondItem="yF8-un-Su3" secondAttribute="bottom" constant="20" id="8AN-Ld-CoN"/>
+                            <constraint firstItem="p0A-ha-MO4" firstAttribute="top" secondItem="XG6-FX-g4f" secondAttribute="top" constant="15" id="EDC-bF-a6x"/>
+                            <constraint firstItem="XG6-FX-g4f" firstAttribute="trailing" secondItem="yF8-un-Su3" secondAttribute="trailing" constant="20" id="bqy-El-eOk"/>
+                            <constraint firstItem="XG6-FX-g4f" firstAttribute="trailing" secondItem="p0A-ha-MO4" secondAttribute="trailing" constant="20" id="r9n-Vp-Zog"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XG6-FX-g4f"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="8AN-Ld-CoN" id="uLB-S3-War"/>
+                        <outlet property="doneButton" destination="lra-67-EJR" id="Pd3-aI-LmG"/>
+                        <outlet property="segmentedControl" destination="tAc-lS-ecd" id="ORh-9C-057"/>
+                        <outlet property="textView" destination="fme-gU-6il" id="fIZ-fY-c8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kS7-Q8-Dgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="54"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IWB-wf-qWY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S6u-7Q-eeT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="zSU-eg-QHb">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ItC-aP-D1o" kind="relationship" relationship="rootViewController" id="ueW-Cf-Noh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4y-zP-cJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="55"/>
+        </scene>
+    </scenes>
+</document>
